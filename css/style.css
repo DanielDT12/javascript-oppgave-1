@@ -1,0 +1,67 @@
+@import url(./base/_andy-bell-reset.css);
+@import url(./base/_root.css);
+@import url(./utilities/_utility-classes.css);
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    font-family: var(--ff-regular);
+    background-color: var(--clr-neutral-800);
+}
+
+.primary-header {
+    position: relative;
+    isolation: isolate;
+}
+
+.primary-header__info {
+    position: absolute;
+    width: 100%;
+    padding: 12rem 2rem;
+    justify-content: space-between;
+}
+
+.search-input {
+    border: 3px solid var(--clr-primary-600);
+    border-radius: .75rem;
+    padding: 1em 1.5em;
+    background-color: var(--clr-neutral-100);
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+.seach-input::placeholder {
+    font-family: var(--ff-regular);
+}
+
+.primary-header__background {
+    position: absolute;
+    z-index: -1;
+    max-height: 50rem;
+    background: linear-gradient(90deg, var(--clr-primary-400), transparent);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 10%);
+}
+
+.background__video {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    mix-blend-mode: difference;
+}
+
+.logo-link {
+    color: var(--clr-primary-400);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-1000);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    transition: text-shadow 300ms ease;
+}
+
+.logo-link:is(:hover, :focus) {
+    text-shadow: 4px 4px var(--clr-neutral-100);
+}
