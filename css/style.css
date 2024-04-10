@@ -11,9 +11,14 @@ body {
     background-color: var(--clr-neutral-800);
 }
 
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
 .primary-header {
     position: relative;
-    isolation: isolate;
 }
 
 .primary-header__info {
@@ -23,19 +28,23 @@ body {
     justify-content: space-between;
 }
 
+/* INPUT TYPE SEARCH I NAVBAR */
 .search-input {
     border: 3px solid var(--clr-primary-600);
     border-radius: .75rem;
     padding: 1em 1.5em;
+    color: var(--clr-neutral-800);
     background-color: var(--clr-neutral-100);
     font-size: 1.125rem;
     line-height: 1;
 }
 
-.seach-input::placeholder {
+.search-input::placeholder {
+    color: var(--clr-neutral-800);
     font-family: var(--ff-regular);
 }
 
+/* DIV MED VIDEO BAKGRUNN */
 .primary-header__background {
     position: absolute;
     z-index: -1;
@@ -51,6 +60,7 @@ body {
     mix-blend-mode: difference;
 }
 
+/* MOVIES LOGO */
 .logo-link {
     color: var(--clr-primary-400);
     font-family: var(--ff-heading);
@@ -64,4 +74,41 @@ body {
 
 .logo-link:is(:hover, :focus) {
     text-shadow: 4px 4px var(--clr-neutral-100);
+}
+
+/* MAIN CONTENT SEKSJON */
+.main-content {
+    margin-block-start: 55rem;
+    border-top: 1px solid lime;
+}
+
+.movies {
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+}
+
+/* DUMB MEDIA QUERY FIX */
+@media (max-width: 1440px) {
+    .main-content {
+        margin-block-start: 50rem;
+    }
+}
+
+@media (max-width: 1110px) {
+    .main-content {
+        margin-block-start: 40rem;
+    }
+}
+
+@media (max-width: 876px) {
+    .main-content {
+        margin-block-start: 30rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .main-content {
+        margin-block-start: 24rem;
+    }
 }
