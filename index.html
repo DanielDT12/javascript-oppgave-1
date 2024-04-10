@@ -8,25 +8,33 @@
     <script src="./script/main.js"></script>
 </head>
 <body>
-    <header class="primary-header">
-        <div class="primary-header__info flex-row-center">
-            <a class="logo-link" href="index.html">Movies</a>
-            <nav>
-                <input class="search-input" type="search" placeholder="Search title, genre">
-            </nav>
-        </div>
-        
-        <div class="primary-header__background">
-            <video class="background__video" src="./assets/videos/background/VHS-background-video.mp4" autoplay></video>
-        </div>
-    </header>
+    <div class="flex-wrapper">
+        <header class="primary-header">
+            <div class="primary-header__info flex-row-center">
+                <a class="logo-link" href="index.html">Movies</a>
+                <nav>
+                    <input class="search-input" type="search" placeholder="Search title, genre">
+                </nav>
+            </div>
+            
+            <div class="primary-header__background">
+                <video class="background__video" src="./assets/videos/background/VHS-background-video.mp4" autoplay></video>
+            </div>
+        </header>
 
-    <main>
+        <main class="main-content">
+            <section class="movies">
+                <h1>Movies by Genre</h1>
+                <div class="action-movies">
+                    <h2>Action</h2>
+                    <div id="mission-impossible-series"></div>
+                </div>
+            </section>
+        </main>
 
-    </main>
+        <footer class="priamry-footer">
 
-    <footer class="priamry-footer">
-
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
