@@ -1,15 +1,22 @@
 .flex-row {
     display: flex;
+    gap: var(--flex-row-gap, 1rem);
 }
 
 .flex-row-center {
     display: flex;
     align-items: center;
+    gap: var(--flex-row-gap, 1rem);
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+    gap: var(--flex-column-gap, 1rem);
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 .flow > * + * {
