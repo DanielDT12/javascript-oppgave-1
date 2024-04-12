@@ -9,6 +9,7 @@ html {
 body {
     font-family: var(--ff-regular);
     background-color: var(--clr-neutral-800);
+    overflow-x: hidden;
 }
 
 .flex-wrapper {
@@ -86,22 +87,39 @@ body {
     display: grid;
     place-content: center;
     margin-inline: auto;
-    margin-block: 5rem;
+    margin: 5rem 2rem;
+}
+
+.action-movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 90rem;
 }
 
 #mission-impossible-series {
     display: flex;
-    justify-content: space-between;
+    align-self: center;
+    gap: 1rem;
     overflow-x: scroll;
+    max-width: 100%;
 }
 
 .movie-card {
     --flex-row-gap: 0;
+    min-width: 35em;
+    justify-content: space-between;
     background-color: var(--clr-neutral-400);
 }
 
 .movie-info {
+    width: 100%;
     padding: 1rem;
+}
+
+.movie-poster {
+    width: 220px;
 }
 
 /* DUMB MEDIA QUERY FIX */
