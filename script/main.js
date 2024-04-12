@@ -1,4 +1,4 @@
-import { movieReview, pageDocs } from "./modules/movie-database.js"
+import { movieReview, pageDocs, movieReviewComments } from "./modules/movie-database.js"
 
 movieCard()
 
@@ -26,3 +26,30 @@ function movieCard() {
             </div>`;
     }
 };
+
+pageDocs.showReview.addEventListener("click", showReviews);
+
+function showReviews() {
+    let commentsShown = pageDocs.reviewComments.style.display !== "none";
+
+    pageDocs.reviewComments.style.display = commentsShown ? "none" : "grid";
+    if (commentsShown) {
+        pageDocs.reviewComments.innerHTML = "";
+        return;
+    }
+
+    const numberOfReviews = movieReviewComments.length;
+
+    for (let i = 0; i < numberOfReviews; i++) {
+        const div = document.createElement("div");
+        const p = document.createElement("p");
+        div.className = "review-comment-container";
+
+        let randomReviewIndex = Math.floor(Math.random() * movieReviewComments.length);
+        let randomReview = movieReviewComments[randomReviewIndex];
+
+        p.textContent = randomReview;
+        div.appendChild(p);
+        pageDocs.reviewComments.appendChild(div);
+    }
+}
