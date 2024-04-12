@@ -1,6 +1,7 @@
-@import url(./base/_andy-bell-reset.css);
-@import url(./base/_root.css);
-@import url(./utilities/_utility-classes.css);
+@import url(../css/base/_andy-bell-reset.css);
+@import url(../css/base/_root.css);
+@import url(../css/utilities/_utility-classes.css);
+
 
 html {
     color-scheme: dark light;
