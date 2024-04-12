@@ -80,7 +80,6 @@ body {
 /* MAIN CONTENT SEKSJON */
 .main-content {
     margin-block-start: 55rem;
-    border-top: 1px solid lime;
 }
 
 .movies {
@@ -121,6 +120,24 @@ body {
 .movie-poster {
     width: 220px;
 }
+
+.user-reviews {
+    max-width: 90rem;
+    margin: 2rem auto;
+}
+
+#review-container {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.review-comment-container {
+    margin: 1rem 1rem;
+    border: 1px solid var(--clr-primary-600);
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: var(--clr-neutral-400);
+}
+
 
 /* DUMB MEDIA QUERY FIX */
 @media (max-width: 1440px) {
